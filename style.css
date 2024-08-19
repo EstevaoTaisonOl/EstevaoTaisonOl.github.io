@@ -137,10 +137,10 @@ main{
 
 @keyframes skillsKey {
     0% {
-      transform: translateX(-1000px); /* Ponto de partida */
+        transform: scale(1.5);
     }
     100% {
-      transform: translateX(0); /* Ponto final */
+        transform: scale(1);
     }
   }
   
