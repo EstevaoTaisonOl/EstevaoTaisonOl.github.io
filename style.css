@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-weight: 350px;
+    font-style: normal;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: #111;
+}
+
+header{
+    color: rgb(235, 66, 66);    
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Assegura que o header fica acima de outros elementos */
+    background-color: #111; /* Mantém o fundo do header */
+    padding: 10px 20px; /* Adiciona padding para espaçamento */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+    
+    nav{
+        display: flex;
+        flex-wrap: wrap; /* Permite que os links quebrem linha se necessário */
+        a{
+            margin: 10px; /* Ajusta a margem para ser mais compacta em telas menores */
+            text-decoration: none;
+            color: white;
+            transition: color 0.5s ease;
+        }
+        a:hover{
+            color: rgb(252, 97, 97);
+        }
+    }
+}
+
+/* Media query para telas menores (tablet e celular) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px; /* Ajusta o padding para ser mais compacto */
+    }
+
+    nav {
+        width: 100%; /* Garante que o nav ocupe toda a largura do header */
+        justify-content: center; /* Centraliza os links no nav */
+        a {
+            margin: 10px 0; /* Ajusta a margem entre os links para ser mais espaçada verticalmente */
+        }
+    }
+}
+
+/* Media query para telas muito pequenas (celulares pequenos) */
+@media (max-width: 480px) {
+
+    header {
+        padding: 0px 0px; /* Reduz o padding ainda mais */
+    }
+
+    nav {
+        a {
+            margin: 5px 0; /* Reduz a margem dos links */
+            font-size: 14px; /* Reduz o tamanho da fonte para caber melhor na tela */
+        }
+    }
+}
+
+
+main{
+    margin-top: 10%;
+    .div-top{
+        display: flex;
+        h1{
+            font-size: 400%;
+            margin-left: 20px;
+            color: #f6f6f6;
+        }
+        .important{
+            color: rgb(235, 66, 66);
+        }
+    }
+
+    .div-midle{
+        display: flex;
+        margin: 20px;
+        color: rgb(244, 244, 244);
+
+        span{
+            margin-left: 10px;
+        }
+        .important{
+            color: rgb(235, 66, 66);
+        }
+    }
+
+    .div-end{
+        margin-left: 20px;
+        display: flex;
+        button{
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border: 2px rgb(235, 66, 66) solid;
+            border: 2px red solid;
+            background-color: #111;
+            border-radius: 50%;
+            transition: 0.3s ease;
+            img{
+                width: 90%;
+                height: auto;
+            }
+            
+        }
+        button:hover{
+            color: black;
+            transform: scale(1.3) translateY(-5px);
+            background-color: #ff000077;
+            box-shadow: 0  0 25px #f52f2fd4;
+        }
+    }
+}
+
+.div-skills{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        color: #f6f6f6;
+        font-size: 300%;
+    }
+
+    .skills{
+        display: flex;
+        justify-content: center;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:rgba(235, 66, 66, 0.813);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 0.3s ease;
+        }
+        div:hover{
+            color: black;
+            transform: scale(1.3) translateY(-5px);
+            background-color: #ff000077;
+            box-shadow: 0  0 25px #f52f2fd4;
+        }
+    }
+}
+
+
+@keyframes aumentar {
+    from{
+        width: 50px;
+        height: 50px;
+    }
+    to{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes diminuir {
+    from{
+        width: 60px;
+        height: 60px;
+    }
+    to{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav{
+        margin-right: 10px;
+    }
+
+   .div-midle{
+    h1{
+        width: 100%;
+    }
+   }
+
+   main{
+    margin-top: 20%;
+   }
+
+   .skills{
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 50%;
+
+    div{
+        width: 10%;
+        height: auto;
+        padding: 5px;
+    }
+   }
+
+}
+
+@media (min-width: 600px) {
+    nav{
+        margin-right: 100px;
+    }
+
+    .skills{
+        width: 50%;
+    }
+}
