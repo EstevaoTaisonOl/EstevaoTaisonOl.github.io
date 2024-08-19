@@ -135,6 +135,16 @@ main{
     }
 }
 
+@keyframes skillsKey {
+    0% {
+      transform: translateX(-1000px); /* Ponto de partida */
+    }
+    100% {
+      transform: translateX(0); /* Ponto final */
+    }
+  }
+  
+
 .div-skills{
     margin-top: 2%;
     display: flex;
@@ -162,6 +172,7 @@ main{
             border-radius: 20px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             transition: 0.3s ease;
+            animation: skillsKey 1s ease;
         }
         div:hover{
             color: black;
