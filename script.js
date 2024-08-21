@@ -1,16 +1,24 @@
-const apiResponseRepositorios = async () => {
-    var apiResponse = await fetch(`https://api.github.com/users/EstevaoTaisonOl/repos`)
-
-    var data = await apiResponse.json()
+const game1 = document.getElementById("projeto-game1")
+const game2 = document.getElementById("projeto-game2")
 
 
-    return data
-}
+game1.addEventListener("click", () => {
+    window.location.href = "https://github.com/EstevaoTaisonOl/projeto-list"
+})
 
-async function infosRep(){
-    const data = await apiResponseRepositorios()
-    for(var key in data){
-    }
-}
+game2.addEventListener("click", () => {
+    window.location.href = "https://github.com/EstevaoTaisonOl/gamee.git"
+})
 
-infosRep()
+
+const github = document.getElementById("github")
+
+github.addEventListener("click", () => {
+    window.location.href = "https://github.com/EstevaoTaisonOl/"
+})
+
+const instagram = document.getElementById("instagram")
+
+instagram.addEventListener("click", () => {
+    window.location.href = "https://www.instagram.com/__estevao__bah/"
+})
