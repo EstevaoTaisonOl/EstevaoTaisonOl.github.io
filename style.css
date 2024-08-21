@@ -22,7 +22,6 @@ header{
     color: rgb(235, 66, 66);    
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
     align-items: center;
     position: fixed;
     top: 0;
